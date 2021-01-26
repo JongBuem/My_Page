@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b79e876aa.js" crossorigin="anonymous"></script>
-    <script src="mian.js" defer></script>
+    <script src="js/mian.js" defer></script>
 </head>
 <body>
+    <!--Navigation-->
     <nav class="navbar">
         <a href="#" class="logo">
             <i class="fas fa-igloo"></i>
         </a>
-        <i class="fas fa-bars"></i>
+        <a href="#" class="togglebtn">
+            <i class="fas fa-bars"></i>
+        </a>
         <div class="navbar_menu">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -24,7 +27,7 @@
             <a href="#">Contact</a>
         </div>
     </nav>
-
+    <!--Home-->
     <section id="home">
         <div class="inner_width">
             <div class="content">
@@ -44,14 +47,73 @@
         </div>
     </section>
 
-    <p>
-        asdjasldjoasidjaoisdjasod <br>
-        asdjasodjasodijasod<br>
-        asdoisajdos<br>
-        <br>
-        <br>
-        <br>
-        <br><br>
-    </p>
+    <section id="about">
+        <div class="inner_width">
+            <h1 class="section_title">About</h1>
+            <div class="about_content">
+                <img src="img/me.jpg" alt="" class="about_img">
+                <div class="about_text">
+                    <h2>Hi I'm JongBuem</h2>
+                    <h3>
+                        <span>Developer</span>
+                        <span>Front end</span>
+                        <span>Junior</span>
+                    </h3>
+                    <p>
+                        안녕!!! 호이!!! Hello!!!
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill_info">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill_bar html"></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_info">
+                        <span>CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill_bar css"></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_info">
+                        <span>Javascript</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill_bar js"></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_info">
+                        <span>Vue</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="skill_bar vue"></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_info">
+                        <span>MySQL</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill_bar mysql"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--services-->
+    <section id="services" class="dark">
+        <div class="inner_width">
+            <h1 class="section_title">Services</h1>
+        </div>
+    </section>
 </body>
 </html>

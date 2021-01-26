@@ -41,7 +41,7 @@
   margin-right: 30px;
 }
 
-.navbar_menu .fas {
+.navbar .fa-bars {
   display: none;
 }
 
@@ -63,15 +63,15 @@
 }
 
 .sticky .navbar_menu a,
-.sticky .navbar_toggler a,
-.sticky .fas {
+.sticky .logo i,
+.sticky .togglebtn i {
   color: black;
 }
 
 #home {
   height: 100vh;
   min-height: 500px;
-  background: url(2.JPG) no-repeat center;
+  background: url(img/2.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -95,7 +95,7 @@
 }
 
 #home .content h1::after {
-  content: "JoungBuem";
+  content: "JongBuem";
   animation: textanim 10s linear infinite;
 }
 
@@ -146,8 +146,135 @@
   color: #fff;
 }
 
+section {
+  padding: 100px 0;
+  background-color: #f1f1f1;
+}
+
+.section_title {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: #111;
+}
+
+.section_title::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #111;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+
+.section_title::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-color: #48dbfb;
+  border: 4px solid #f1f1f1;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+
+.about_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about_img {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+
+.about_text {
+  flex: 1;
+}
+
+.about_text h3 {
+  margin: 10px 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.about_text h3 span:nth-child(1):after,
+.about_text h3 span:nth-child(2):after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #444;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 14px;
+}
+
+.about_text p {
+  font-size: 17px;
+  text-align: justify;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+.skills {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: calc(50% - 20px);
+  margin: 15px 0;
+}
+
+.skill_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill_bar {
+  height: 3px;
+  background-color: #ddd;
+  margin-top: 14px;
+  position: relative;
+}
+
+.skill_bar::after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  background-color: #48db48;
+  bottom: 0;
+}
+
+.html:after {
+  width: 90%;
+}
+
+.css:after {
+  width: 90%;
+}
+
+.js:after {
+  width: 60%;
+}
+
+.vue:after {
+  width: 40%;
+}
+
+.mysql:after {
+  width: 70%;
+}
+
 @media screen and (max-width: 980px) {
-  .fas {
+  .navbar .fas {
     display: block;
     color: white;
     font-size: 30px;
@@ -180,5 +307,28 @@
 
   .navbar_menu.barsClick {
     right: -10%;
+  }
+
+  .inner_width {
+    max-width: 800px;
+  }
+
+  .about_img {
+    margin: 0 auto 60px;
+  }
+
+  .about_text {
+    flex: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inner_width {
+    padding: 0 20px;
+  }
+
+  .skill {
+    width: 100%;
   }
 }
