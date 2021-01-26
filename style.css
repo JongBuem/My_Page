@@ -14,7 +14,7 @@
   top: 0;
   padding: 30px 0;
   z-index: 999;
-  transition: 0.3s linear;
+  transition: 0.2s linear;
   justify-content: space-between;
 }
 
@@ -76,9 +76,11 @@
 #home {
   height: 100vh;
   min-height: 500px;
-  background: url(img/2.jpg) no-repeat center;
+  background: url(img/2bg.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
 }
 
 #home .inner_width {
@@ -145,8 +147,7 @@
   transition: 0.2s linear;
 }
 
-#home .buttons a:hover,
-#home .buttons a:nth-child(2) {
+#home .buttons a:hover {
   background-color: #48dbfb;
   color: #fff;
 }
@@ -332,6 +333,53 @@ section {
   color: #fff;
 }
 
+.time_line {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.block {
+  width: calc(50% - 20px);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 30px;
+  position: relative;
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 120%;
+  background-color: #ddd;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.block::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #48dbfb;
+  left: -28px;
+  top: 30px;
+  border-radius: 50%;
+}
+
+.block h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.block p {
+  font-size: 15px;
+  color: #444;
+}
+
 @media screen and (max-width: 980px) {
   .navbar .fas {
     display: block;
@@ -382,7 +430,12 @@ section {
   }
 
   .Ability {
-    width: calc(50% -20px);
+    width: calc(50% - 20px);
+  }
+
+  .block {
+    width: calc(100% - 20px);
+    margin-left: auto;
   }
 }
 
